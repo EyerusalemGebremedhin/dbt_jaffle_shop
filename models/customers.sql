@@ -54,7 +54,14 @@ final as (
         customer_orders.first_order,
         customer_orders.most_recent_order,
         customer_orders.number_of_orders,
-        customer_payments.total_amount as customer_lifetime_value
+        customer_payments.total_amount as customer_lifetime_value,
+
+        -- Average amount spent per order (0 if no orders)
+        case
+            when customer_orders.number_of_orders > 0
+            then customer_payments.total_amount / customer_orders.number_of_orders
+            else 0
+        end as average_order_value
 
     from customers
 

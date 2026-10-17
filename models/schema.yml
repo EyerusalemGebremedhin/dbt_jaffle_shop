@@ -29,6 +29,11 @@ models:
       - name: total_order_amount
         description: Total value (AUD) of a customer's orders
 
+      - name: average_order_value
+        description: Average amount (AUD) spent per order. 0 if the customer has no orders.
+        tests:
+          - not_null
+
   - name: orders
     description: This table has basic information about orders, as well as some derived facts based on payments
 
