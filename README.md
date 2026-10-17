@@ -86,7 +86,7 @@ To prove the tests work, I:
 1. Added a duplicate customer_id to `seeds/raw_customers.csv`
 2. Ran `dbt build` - the `unique` test on customer_id FAILED with: "Got 1 result, configured to fail if != 0"
 3. Removed the duplicate line
-4. Ran `dbt build` again - all 29 tests PASSED
+4. Ran `dbt build` again - all 29 steps PASSED (3 seeds, 3 views, 2 tables, and 21 tests)
 
 ## Why we test data
 

@@ -26,8 +26,8 @@ models:
       - name: number_of_orders
         description: Count of the number of orders a customer has placed
 
-      - name: total_order_amount
-        description: Total value (AUD) of a customer's orders
+      - name: customer_lifetime_value
+        description: Total amount (AUD) a customer has spent across all orders.
 
       - name: average_order_value
         description: Average amount (AUD) spent per order. 0 if the customer has no orders.
